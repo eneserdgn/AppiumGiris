@@ -20,13 +20,13 @@ public class DriverFactory {
         if (browser.equals("Android")) {
             capabilities.setCapability("platformName", "Android");
             capabilities.setCapability("udid", "emulator-5554");
-            capabilities.setCapability("appPackage", "com.faladdin.app");
-            capabilities.setCapability("appActivity", "com.faladdin.app.ui.launcher.LauncherActivity");
+            capabilities.setCapability("appPackage", "com.lcwaikiki.android");
+            capabilities.setCapability("appActivity", "com.lcwaikiki.android.ui.SplashActivity");
         } else if (browser.equals("iOS")) {
             capabilities.setCapability("platformName", "iOS");
             capabilities.setCapability("udid", "rsdgn1156");
-            capabilities.setCapability("appPackage", "com.iPhone.faladdin.app");
-            capabilities.setCapability("appActivity", "com.iPhone.faladdin.app.ui.launcher.LauncherActivity");
+            capabilities.setCapability("appPackage", "com.lcwaikiki.android");
+            capabilities.setCapability("appActivity", "com.lcwaikiki.android.ui.SplashActivity");
         }
         try {
             driver = new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
